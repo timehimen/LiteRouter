@@ -1,4 +1,9 @@
 <?php
+/*
+ * @author Timothy Ehimen
+ * @email: tim@timothyehimen.com
+ *
+ */
 declare(strict_types=1);
 
 namespace LiteRouter\Router;

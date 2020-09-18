@@ -1,4 +1,10 @@
 <?php
+/*
+ * @author Timothy Ehimen
+ * @email: tim@timothyehimen.com
+ *
+ */
+
 declare(strict_types=1);
 
 namespace LiteRouter\Http;
@@ -45,5 +51,9 @@ class Request {
 
     public function getBody() {
         return $this->body;
+    }
+
+    public function getMethod(): string {
+        return HttpClient::getRequestMethod();
     }
 }

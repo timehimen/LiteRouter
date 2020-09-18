@@ -9,11 +9,11 @@ $router->get("/", function () {
     echo "Hello from router";
 });
 
-$router->get("/test", function ($request) {
+$router->get("/test", function ($request, $response) {
     require_once 'test_home.php';
 });
 
-$router->get("/test/:animal", function ($request) {
+$router->get("/test/:animal", function ($request, $response) {
     require_once 'test_home.php';
 });
 

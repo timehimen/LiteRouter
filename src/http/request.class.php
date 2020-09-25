@@ -33,13 +33,13 @@ class Request {
     }
 
     public function addParam(string $key, string $value): void {
-        if($key !== "" && $value !== "") {
+        if(!empty($key) && !empty($value)) {
             $this->params[$key] = $value;
         }
     }
 
     public function getParam(string $key) {
-        if($key !== "" && isset($this->params[$key])) {
+        if(!empty($key) && isset($this->params[$key])) {
             return $this->params[$key];
         }
         return null;

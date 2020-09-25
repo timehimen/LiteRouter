@@ -10,11 +10,11 @@ $router->get("/", function () {
 });
 
 $router->get("/test", function ($request, $response) {
-    require_once 'test_home.php';
+    $response->status(400)->send("Invalid url");
 });
 
 $router->get("/test/:animal", function ($request, $response) {
-    require_once 'test_home.php';
+    $response->send("Animal is:  " . $request->getParam("animal"));
 });
 
 $router->get("**", function () {
